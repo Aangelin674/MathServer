@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>Calculator</title>
+    <style>
+      .box
+      {
+        width: 500px;
+        height: 300px;
+        border: dashed 3px black;
+        padding:10 px;
+        position:fixed;
+        top:150px;
+        left:500px;
+        text-align:center;
+        background-color:skyblue;
+
+
+      }
+    </style>
+  </head>
+  <body bgcolor="darkblue">
+    <div class="box">
+      <h1>Calculator</h1>
+      <h3>ANGELIN GRACY.R (25007261</h3>
+    <form method="POST">
+    {% csrf_token %}
+      <div class="formelt">
+        <label>Distance(km)</label>
+        <input type="text" name="Distance" required></input>
+      </div>
+      <br>
+      <div class="formelt">
+      <label>Fuel_used(l)</label>
+        <input type="text" name="Fuel_used" required></input>  
+      </div>
+      <br>
+      <div class="formelt">
+         <input type="submit" value="Calculate"> 
+      </div>
+      <br>
+      <div class="formelt">
+        <label>Mileage:(km/l)</label>
+        <input type="text" name="Mileage" value="{{Mileage}}"></input>
+      </div>
+      <br>
+    </form>
+    </div>
+  </body>
+</html>
+      
